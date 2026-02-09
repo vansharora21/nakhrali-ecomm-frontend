@@ -6,7 +6,6 @@ import { ShopContext } from '../context/ShopContext';
 
 function Navbar() {
   const { scrollY } = useScroll();
-  const [hidden, setHidden] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [visible, setVisible] = useState(false);
   const [activeLink, setActiveLink] = useState("Home");
@@ -21,12 +20,6 @@ function Navbar() {
   }
 
   useMotionValueEvent(scrollY, "change", (latest) => {
-    const previous = scrollY.getPrevious();
-    if (latest > previous && latest > 150) {
-      setHidden(true);
-    } else {
-      setHidden(false);
-    }
     setIsScrolled(latest > 50);
   });
 
@@ -37,21 +30,13 @@ function Navbar() {
     { name: "Contact", path: "/contact" },
   ];
 
-  const textColor = "text-[#F5F5DC]";
+  const textColor = isScrolled ? "text-[#F5F5DC]" : "text-[#414141]";
 
   return (
     <>
-      <motion.div
-        className="bg-[#C06014] text-white text-center py-2 text-[10px] font-bold tracking-widest uppercase"
-        animate={{ height: isScrolled ? 0 : "auto", opacity: isScrolled ? 0 : 1 }}
-        transition={{ duration: 0.3 }}
-      >
-        Free Shipping on orders over ₹1999
-      </motion.div>
+      
 
       <motion.header
-        variants={{ visible: { y: 0 }, hidden: { y: "-100%" } }}
-        animate={hidden ? "hidden" : "visible"}
         transition={{ duration: 0.3 }}
         className={`sticky top-0 z-50 px-6 md:px-20 py-4 transition-all duration-300 border-b border-[#F5F5DC]/10 ${isScrolled
           ? "bg-[#1A1A1A]/90 backdrop-blur-xl shadow-xl"

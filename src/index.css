@@ -7,6 +7,15 @@
 /* Global background pattern */
 body {
   background-color: #fcfaf8;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 @layer utilities {

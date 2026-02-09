@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 function Footer() {
   return (
     <footer className="bg-[#1A1A1A] text-[#F5F5DC] border-t border-[#F5F5DC]/10">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 py-16">
+      <div className="max-w-7l mx-auto px-6 md:px-12 lg:px-20 py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 mb-16">
 
           {/* Brand Section */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
-            <h3 className="text-2xl font-serif font-bold tracking-tight text-primary">
+            <h3 className="text-2xl font-serif font-bold tracking-tight text-[#F5F5DC]">
               EthnicEra
             </h3>
             <p className="text-sm text-gray-400 mt-4 leading-relaxed max-w-[200px]">
@@ -19,7 +19,7 @@ function Footer() {
 
           {/* Navigation - Shop */}
           <div className="text-center md:text-left">
-            <h4 className="text-xs uppercase tracking-[0.2em] font-semibold mb-6 text-primary/80">
+            <h4 className="text-xs uppercase tracking-[0.2em] font-semibold mb-6 text-[#F5F5DC]/80">
               Shop
             </h4>
             <ul className="text-sm text-gray-400 space-y-4">
@@ -31,7 +31,7 @@ function Footer() {
 
           {/* Navigation - Support */}
           <div className="text-center md:text-left">
-            <h4 className="text-xs uppercase tracking-[0.2em] font-semibold mb-6 text-primary/80">
+            <h4 className="text-xs uppercase tracking-[0.2em] font-semibold mb-6 text-[#F5F5DC]/80">
               Support
             </h4>
             <ul className="text-sm text-gray-400 space-y-4">
@@ -43,7 +43,7 @@ function Footer() {
 
           {/* Newsletter Section */}
           <div className="text-center md:text-left">
-            <h4 className="text-xs uppercase tracking-[0.2em] font-semibold mb-6 text-primary/80">
+            <h4 className="text-xs uppercase tracking-[0.2em] font-semibold mb-6 text-[#F5F5DC]/80">
               Newsletter
             </h4>
             <div className="relative group">
